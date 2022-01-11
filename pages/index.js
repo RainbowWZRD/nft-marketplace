@@ -1,8 +1,13 @@
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { ethers } from 'ethers'
 
 export default function Home() {
+  useEffect(() => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+  })
   return (
     <div className={styles.container}>
       <Head>
